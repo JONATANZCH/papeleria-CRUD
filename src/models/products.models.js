@@ -21,7 +21,7 @@ const Producto = db.define('productos', {
     }
   },
   precio_unitario: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.FLOAT,
     unique: true,
     allowNull: false,
   },

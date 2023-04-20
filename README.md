@@ -1,19 +1,17 @@
-MVC 
-
-- services
-    - Req y Res
-
-- controllers
-    - Todo lo relacionado a las acciones que se hace a la base de datos
-
-- router
-    - Ruta y el Verbo HTTP 
+*Init proyect
+- pm2 start ecosystem.config.js
+# Fork mode
+pm2 start app.js --name my-api # Name process
 
 
-Login process
-- Mandar email y password
-- Busqueda por email encontramos toda la info del usuario
-- Id, la password encriptada y role
-- Validar si la password es correcta
+*And to freeze a process list for automatic respawn
+- pm2 save
 
-- Redefinir Users tabl
+
+*Stop the server 
+- pm2 stop
+
+# Restart all processes
+pm2 restart all  
+
+ESTA CONECTADO AL PUERO localhost:4000

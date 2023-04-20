@@ -9,8 +9,12 @@ const app = express()
 
 const PORT = process.env.PORT || 4000
 
-//? Validar la conexión 
+app.set('view engine', 'pug')
+app.set('views', './views')
 
+app.use(express.static('public'))
+
+//? Validar la conexión 
 db.authenticate()
     .then(() => console.log('Database Authenticated!'))
     .catch(err => console.log(err))
@@ -31,7 +35,7 @@ app.get('/', (req, res) => {
     })
 }) 
 
-app.use('/api/v1/products', productRouter)
+app.use('/api/v1', productRouter)
 
 app.listen(PORT, () => {
     console.log(`Server started at port ${PORT}`)

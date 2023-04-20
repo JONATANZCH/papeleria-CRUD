@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./src/app.js",
+    "css": "postcss src/public/css/tailwind.css -o src/public/css/app.css --watch",
     "dev": "nodemon ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,10 +20,15 @@
     "passport": "^0.6.0",
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
+    "pug": "^3.0.2",
     "sequelize": "^6.31.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "autoprefixer": "^10.4.14",
+    "nodemon": "^2.0.22",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.1"
   }
 }

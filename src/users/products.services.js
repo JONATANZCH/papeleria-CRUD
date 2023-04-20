@@ -3,11 +3,11 @@ const productControllers = require('./products.controllers')
 const getAllProducts = (req, res) => {
     productControllers.findAllProducts()
         .then((data) => {
-            res.status(200).json({message: `El producto ${req.product.nombre_producto} hizo esta petición`, data})
+            res.status(200).json({message: 'Estos son todos los productos', data})
         })
         .catch((err) => {
             res.status(400).json({message: 'Bad request', err})
-        })
+        });
 }
 
 const getProductById = (req, res) => {

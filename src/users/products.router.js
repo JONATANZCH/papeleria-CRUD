@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const productServices = require("./products.services");
 
-router.route("/")
+router.route("/products")
   .get(productServices.getAllProducts)
   .post(productServices.postNewProduct);
 
